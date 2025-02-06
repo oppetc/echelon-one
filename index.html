@@ -154,5 +154,13 @@
         }, 500);
     </script>
 
+    window.onload = function() {
+    setTimeout(() => {
+        document.getElementById("loading-screen").classList.add("hidden");
+        document.getElementById("main-content").classList.remove("hidden");
+    }, 3000);
+};
+
+
 </body>
 </html>
