@@ -1,0 +1,45 @@
+
+body {
+    background-color: #000;
+    color: #0f0;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    padding: 50px;
+}
+
+#login-box, #dashboard {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.redacted {
+    background-color: black;
+    color: black;
+    transition: color 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.redacted:hover {
+    color: #0f0;
+}
+
+.glitch {
+    animation: glitch 0.5s infinite alternate;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 2px 2px red; }
+    50% { text-shadow: -2px -2px blue; }
+    100% { text-shadow: 2px 2px red; }
+}
+
+.terminal-box {
+    border: 2px solid #0f0;
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.9);
+}

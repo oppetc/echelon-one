@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECHELON ONE - SYSTEM LOG</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: black;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            text-align: left;
+            padding: 50px;
+            max-width: 900px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .matrix {
+            font-size: 14px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow: hidden;
+        }
+
+        .glitch {
+            animation: glitch 0.2s infinite alternate;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 2px 2px red; }
+            50% { text-shadow: -2px -2px blue; }
+            100% { text-shadow: 2px 2px red; }
+        }
+
+        .flashing {
+            animation: flash 0.5s infinite alternate;
+        }
+
+        @keyframes flash {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .raw-code {
+            background: black;
+            padding: 20px;
+            border-left: 4px solid #00ff00;
+            font-size: 12px;
+        }
+
+        .redacted {
+            background-color: black;
+            color: black;
+            padding: 2px 5px;
+            cursor: pointer;
+            transition: color 0.5s ease-in-out;
+        }
+
+        .redacted:hover {
+            color: #ff0000;
+        }
+
+        .terminal-header {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 2px solid #00ff00;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Loading Screen Styles */
+        #loading-screen {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: black;
+            color: #00ff00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            z-index: 1000;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loading-screen">LOADING SYSTEM FILES...</div>
+
+    <div id="main-content" class="hidden">
+
+        <div class="terminal-header">ECHELON ONE - SYSTEM LOG</div>
+
+        <div class="matrix">
+            <p class="flashing">[SECURITY BREACH DETECTED] - UNAUTHORIZED ACCESS LOGGED...</p>
+            <p class="glitch">Decrypting classified files...</p>
+            <p>███████████████████████████████████████████████████</p>
+            <p class="glitch">**ACCESS GRANTED**</p>
+            <p>Initializing Musk Governance Initiative...</p>
+        </div>
+
+        <div class="raw-code">
+            <h3>LEAKED INTEL:</h3>
+            <pre>
+                > EXEC: PHASE_1_ACTIVE
+                > CONTROL METRICS: AI OVERSIGHT / MEDIA MANIPULATION [███] ✅
+                > PHASE_2: NEURALINK COGNITIVE CONTROL – STATUS: INITIALIZED [███] ✅
+                > PHASE_3: ECONOMIC RESTRUCTURING – STATUS: ON TRACK [███] ✅
+                > PHASE_4: MARS EXODUS – STATUS: PENDING [███] 🔴
+
+                > MEMO: POPULATION COMPLIANCE METRICS:
+                > CATTLE INDEX - SYSTEM ANALYSIS
+                > - NORTH AMERICA: 82% PASSIVE / 12% MANAGEABLE / 6% UNSTABLE
+                > - EUROPE: 89% PASSIVE / 8% MANAGEABLE / 3% UNSTABLE
+                > - ASIA: 95% PASSIVE / 4% MANAGEABLE / 1% UNSTABLE
+                > - AFRICA: 76% PASSIVE / 15% MANAGEABLE / 9% UNSTABLE
+                > - SOUTH AMERICA: 84% PASSIVE / 10% MANAGEABLE / 6% UNSTABLE
+
+                > NEXT SYSTEM SCAN: ██:██:████
+                > AI SENTIMENT ANALYSIS: COMPLIANCE DETECTION ACTIVE
+            </pre>
+        </div>
+
+        <div class="matrix flashing">
+            <p>🔺 System Warning: This log will self-destruct upon external detection.</p>
+            <p>🔺 External surveillance detected...</p>
+            <p>🔺 Logging user IP: ███.███.███.███</p>
+        </div>
+
+    </div>
+
+    <script>
+        // Show loading screen before revealing main content
+        setTimeout(() => {
+            document.getElementById("loading-screen").classList.add("hidden");
+            document.getElementById("main-content").classList.remove("hidden");
+        }, 3000);
+
+        // Flashing text effect
+        setInterval(() => {
+            let elements = document.querySelectorAll('.flashing');
+            elements.forEach(el => {
+                el.style.color = el.style.color === 'red' ? '#00ff00' : 'red';
+            });
+        }, 500);
+    </script>
+
+</body>
+</html>
