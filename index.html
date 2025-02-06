@@ -139,11 +139,12 @@
     </div>
 
     <script>
-        // Show loading screen before revealing main content
+     window.onload = function() {   // Show loading screen before revealing main content
         setTimeout(() => {
             document.getElementById("loading-screen").classList.add("hidden");
             document.getElementById("main-content").classList.remove("hidden");
         }, 3000);
+     });
 
         // Flashing text effect
         setInterval(() => {
@@ -154,11 +155,6 @@
         }, 500);
     </script>
 
-    window.onload = function() {
-    setTimeout(() => {
-        document.getElementById("loading-screen").classList.add("hidden");
-        document.getElementById("main-content").classList.remove("hidden");
-    }, 3000);
 };
 
 
