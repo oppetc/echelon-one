@@ -1,3 +1,16 @@
+document.addEventListener("DOMContentLoaded", function() {
+    let loadingScreen = document.getElementById("loading-screen");
+    let mainContent = document.getElementById("main-content");
+
+    if (loadingScreen && mainContent) {
+        setTimeout(() => {
+            loadingScreen.classList.add("hidden");
+            mainContent.classList.remove("hidden");
+        }, 3000);
+    } else {
+        console.error("Error: Could not find loading-screen or main-content elements.");
+    }
+});
 
 document.getElementById("login-box").style.display = "block";
 
